@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+	<title>Color Admin | Calendar</title>
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+	<meta content="" name="description" />
+	<meta content="" name="author" />
+	
+	<!-- ================== BEGIN BASE CSS STYLE ================== -->
+	<link href="assets/public/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css" rel="stylesheet" />
+	<link href="assets/public/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="assets/public/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="assets/public/css/animate.min.css" rel="stylesheet" />
+	<link href="assets/public/css/style.min.css" rel="stylesheet" />
+	<link href="assets/public/css/style-responsive.min.css" rel="stylesheet" />
+	<link href="assets/public/css/theme/default.css" rel="stylesheet" id="theme" />
+	<!-- ================== END BASE CSS STYLE ================== -->
+	
+	<!-- ================== BEGIN PAGE LEVEL STYLE ================== -->
+	<link href="assets/public/plugins/fullcalendar/fullcalendar/fullcalendar.css" rel="stylesheet" />
+	<!-- ================== END PAGE LEVEL STYLE ================== -->
+</head>
+<body>
+	<!-- begin #page-container -->
+	<div id="page-container" class="fade page-sidebar-fixed page-header-fixed">
+		<!-- begin #content -->
+		<div id="content" class="content">
+		    <!-- begin breadcrumb -->
+			<ol class="breadcrumb pull-right">
+				<li><a href="javascript:;">Home</a></li>
+				<li class="active">Calendar</li>
+			</ol>
+			<!-- end breadcrumb -->
+			<!-- begin page-header -->
+			<h1 class="page-header">Calendar <small>header small text goes here...</small></h1>
+			<!-- end page-header -->
+			<!-- begin panel -->
+			<div class="panel panel-inverse">
+			    <div class="panel-heading">
+			        <div class="panel-heading-btn">
+			            <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+			            <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
+			            <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+			            <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
+			        </div>
+			        <h4 class="panel-title">Calendar</h4>
+			    </div>
+			    <div class="panel-body p-0">
+			        <div class="vertical-box">
+			            <div class="vertical-box-column p-15 bg-silver width-sm">
+                            <div id="external-events" class="calendar-event">
+                                <h4 class=" m-b-20">Draggable Events</h4>
+                                <div class="external-event bg-purple" data-bg="bg-purple" data-title="Discussion" data-media="<i class='fa fa-comments'></i>" data-desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
+                                    <h5><i class="fa fa-comments fa-lg fa-fw"></i> Discussion</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                                <div class="external-event bg-blue" data-bg="bg-blue" data-title="Dinner" data-media="<i class='fa fa-cutlery'></i>" data-desc="Cum sociis natoque penatibus et magnis dis parturient montes."> 
+                                    <h5><i class="fa fa-cutlery fa-lg fa-fw"></i> Dinner</h5>
+                                    <p>Cum sociis natoque penatibus et magnis dis parturient montes.</p>
+                                </div>
+                                <div class="external-event bg-green" data-bg="bg-green" data-title="Brainstorming" data-media="<i class='fa fa-lightbulb-o'></i>" data-desc="Mauris tristique massa eu venenatis semper. Phasellus a nibh nisi.">
+                                    <h5><i class="fa fa-lightbulb-o fa-lg fa-fw"></i> Brainstorming</h5>
+                                    <p>Mauris tristique massa eu venenatis semper. Phasellus a nibh nisi.</p>
+                                </div>
+                                <div class="external-event bg-orange" data-bg="bg-orange" data-title="Performance Rating" data-media="<i class='fa fa-tasks'></i>" data-desc="Class aptent taciti sociosqu ad litora torquent per conubia nostra.">
+                                     <h5><i class="fa fa-tasks fa-lg fa-fw"></i> Performance Rating</h5>
+                                    <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra.</p>
+                                </div>
+                                <div class="external-event bg-red" data-bg="bg-red" data-title="Video Shooting" data-media="<i class='fa fa-video-camera'></i>" data-desc="Donec ligula nisi, tempus eu egestas id, auctor sit amet velit.">
+                                    <h5><i class="fa fa-video-camera fa-lg fa-fw"></i> Video Shooting</h5>
+                                    <p>Donec ligula nisi, tempus eu egestas id, auctor sit amet velit.</p>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" id="drop-remove" />
+                                        remove after drop
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="calendar" class="vertical-box-column p-15 calendar"></div>
+			        </div>
+			    </div>
+			</div>
+			<!-- end panel -->
+		</div>
+		<!-- end #content -->
+		<!-- begin scroll to top btn -->
+		<a href="javascript:;" class="btn btn-icon btn-circle btn-success btn-scroll-to-top fade" data-click="scroll-top"><i class="fa fa-angle-up"></i></a>
+		<!-- end scroll to top btn -->
+	</div>
+	<!-- end page container -->
+	
+	<!-- ================== BEGIN BASE JS ================== -->
+	<script src="assets/public/plugins/jquery/jquery-1.9.1.min.js"></script>
+	<script src="assets/public/plugins/jquery/jquery-migrate-1.1.0.min.js"></script>
+	<script src="assets/public/plugins/jquery-ui/ui/minified/jquery-ui.min.js"></script>
+	<script src="assets/public/plugins/bootstrap/js/bootstrap.min.js"></script>
+	<!--[if lt IE 9]>
+		<script src="assets/public/crossbrowserjs/html5shiv.js"></script>
+		<script src="assets/public/crossbrowserjs/respond.min.js"></script>
+		<script src="assets/public/crossbrowserjs/excanvas.min.js"></script>
+	<![endif]-->
+	<script src="assets/public/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+	<script src="assets/public/plugins/jquery-cookie/jquery.cookie.js"></script>
+	<!-- ================== END BASE JS ================== -->
+	
+	<!-- ================== BEGIN PAGE LEVEL JS ================== -->
+	<script src="assets/public/plugins/fullcalendar/fullcalendar/fullcalendar.js"></script>
+	<script src="assets/public/js/calendar.demo.min.js"></script>
+	<script src="assets/public/js/apps.min.js"></script>
+	<!-- ================== END PAGE LEVEL JS ================== -->
+	
+	<script>
+		$(document).ready(function() {
+			App.init();
+			Calendar.init();
+		});
+	</script>
+	 
+</body>
+</html>

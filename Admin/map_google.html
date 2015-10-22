@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+	<title>Color Admin | Maps</title>
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+	<meta content="" name="description" />
+	<meta content="" name="author" />
+	
+	<!-- ================== BEGIN BASE CSS STYLE ================== -->
+	<link href="assets/public/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css" rel="stylesheet" />
+	<link href="assets/public/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="assets/public/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="assets/public/css/animate.min.css" rel="stylesheet" />
+	<link href="assets/public/css/style.min.css" rel="stylesheet" />
+	<link href="assets/public/css/style-responsive.min.css" rel="stylesheet" />
+	<link href="assets/public/css/theme/default.css" rel="stylesheet" id="theme" />
+	<!-- ================== END BASE CSS STYLE ================== -->
+</head>
+<body>
+	<!-- begin #page-container -->
+	<div id="page-container" class="fade page-sidebar-fixed page-header-fixed">
+		<!-- begin #content -->
+		<div id="content" class="content content-full-width">
+			<!-- begin breadcrumb -->
+			<ol class="breadcrumb pull-right">
+				<li><a href="javascript:;">Home</a></li>
+				<li><a href="javascript:;">Map</a></li>
+				<li class="active">Google Map</li>
+			</ol>
+			<!-- end breadcrumb -->
+			<!-- begin page-header -->
+			<h1 class="page-header">Google Map <small>header small text goes here...</small></h1>
+			<!-- end page-header -->
+			
+            <div class="map-content">
+                <div class="btn-group map-btn pull-right">
+                    <button type="button" class="btn btn-sm btn-inverse" id="map-theme-text">Default Theme</button>
+                    <button type="button" class="btn btn-sm btn-inverse dropdown-toggle" data-toggle="dropdown">
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" id="map-theme-selection">
+                        <li class="active"><a href="javascript:;" data-map-theme="default">Default</a></li>
+                        <li><a href="javascript:;" data-map-theme="flat">Flat</a></li>
+                        <li><a href="javascript:;" data-map-theme="turquoise-water">Turquoise Water</a></li>
+                        <li><a href="javascript:;" data-map-theme="icy-blue">Icy Blue</a></li>
+                        <li><a href="javascript:;" data-map-theme="cobalt">Cobalt</a></li>
+                        <li><a href="javascript:;" data-map-theme="old-dry-mud">Old Dry Mud</a></li>
+                        <li><a href="javascript:;" data-map-theme="dark-red">Dark Red</a></li>
+                    </ul>
+                </div>
+            </div>
+			<div class="map">
+                <div id="google-map-default" class="height-full width-full"></div>
+            </div>
+		</div>
+		<!-- end #content -->
+		<!-- begin scroll to top btn -->
+		<a href="javascript:;" class="btn btn-icon btn-circle btn-success btn-scroll-to-top fade" data-click="scroll-top"><i class="fa fa-angle-up"></i></a>
+		<!-- end scroll to top btn -->
+	</div>
+	<!-- end page container -->
+	
+	<!-- ================== BEGIN BASE JS ================== -->
+	<script src="assets/public/plugins/jquery/jquery-1.9.1.min.js"></script>
+	<script src="assets/public/plugins/jquery/jquery-migrate-1.1.0.min.js"></script>
+	<script src="assets/public/plugins/jquery-ui/ui/minified/jquery-ui.min.js"></script>
+	<script src="assets/public/plugins/bootstrap/js/bootstrap.min.js"></script>
+	<!--[if lt IE 9]>
+		<script src="assets/public/crossbrowserjs/html5shiv.js"></script>
+		<script src="assets/public/crossbrowserjs/respond.min.js"></script>
+		<script src="assets/public/crossbrowserjs/excanvas.min.js"></script>
+	<![endif]-->
+	<script src="assets/public/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+	<script src="assets/public/plugins/jquery-cookie/jquery.cookie.js"></script>
+	<!-- ================== END BASE JS ================== -->
+	
+	<!-- ================== BEGIN PAGE LEVEL JS ================== -->
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+	<script src="assets/public/js/map-google.demo.min.js"></script>
+	<script src="assets/public/js/apps.min.js"></script>
+	<!-- ================== END PAGE LEVEL JS ================== -->
+	
+	<script>
+		$(document).ready(function() {
+			App.init();
+			MapGoogle.init();
+		});
+	</script>
+	 
+</body>
+</html>
